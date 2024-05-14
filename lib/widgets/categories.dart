@@ -27,7 +27,7 @@ class Categories extends StatelessWidget {
               horizontal: 20,
               vertical: 10,
             ),
-            margin: const EdgeInsets.only(right: 20),
+            margin: const EdgeInsets.only(right: 10),//mm20
             child: Text(
               catgories[index],
               style: TextStyle(

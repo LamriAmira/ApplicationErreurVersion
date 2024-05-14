@@ -3,7 +3,7 @@ import 'package:football_app/constants.dart';
 import 'package:iconsax/iconsax.dart';
 
 class calenderMatch extends StatelessWidget {
-  final String homeLogo, homeTitle, awayLogo, awayTitle, date, time, week1;
+  final String homeLogo, homeTitle, awayLogo, awayTitle, date, time, week;
   final bool isFavorite;
   const calenderMatch({
     super.key,
@@ -13,7 +13,7 @@ class calenderMatch extends StatelessWidget {
     required this.awayTitle,
     required this.date,
     required this.time,
-    required this.week1,
+    required this.week,
     required this.isFavorite,
   });
 
@@ -61,7 +61,11 @@ class calenderMatch extends StatelessWidget {
               ),
               const SizedBox(width: 5),//mmm10
               Column(
-                children: [
+                children: [ 
+                  Text(//mmm
+                    week,
+                    style: TextStyle(fontSize: 12),
+                  ),//mmm
                   Text(
                     time,
                     style: const TextStyle(

@@ -1,4 +1,4 @@
-//while the app is building let's create the NewsData class
+
 
 class NewsData {
   String? title;
