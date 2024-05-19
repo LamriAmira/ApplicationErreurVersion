@@ -1,7 +1,10 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:football_app/constants.dart';
 import 'package:football_app/logic/models/mysql.dart';
 import 'package:football_app/screens/main_screen.dart';
+import 'package:football_app/screens/signin_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
           background: kbackgroundColor,
         ),
       ),
-      home: const MainScreen(), //WelcomeScreen
+      home: const SignInScreen(), //WelcomeScreen
     );
   }
 }

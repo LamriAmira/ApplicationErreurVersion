@@ -47,7 +47,7 @@ class _NewsListTileState extends State<NewsListTile> {
                       image: widget.data.image_art != null &&
                               widget.data.image_art!.isNotEmpty
                           ? NetworkImage(
-                              "http://192.168.1.35:3000/images/${widget.data.image_art!}")
+                              "http://192.168.1.39:3000/images/${widget.data.image_art!}")
                           : AssetImage('assets/default_image.jpg')
                               as ImageProvider,
                       fit: BoxFit.fitHeight,

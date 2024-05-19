@@ -20,7 +20,7 @@ class DetailsScreen extends StatelessWidget {
           children: [
             data.image_art != null
                 ? Image.network(
-                    "http://192.168.1.35:3000/images/${data.image_art!}")
+                    "http://192.168.1.39:3000/images/${data.image_art!}")
                 : Image.asset('assets/default_image.jpg'),
             const SizedBox(height: 16),
             Text(

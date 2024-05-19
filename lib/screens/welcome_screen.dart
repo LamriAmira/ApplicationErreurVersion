@@ -26,13 +26,13 @@ class WelcomeScreen extends StatelessWidget {
                     text: const TextSpan(
                       children: [
                         TextSpan(
-                            text: 'Welcome To Football 48\n',//Back!
-                            style: TextStyle(
-                              fontSize: 45.0,
-                              fontWeight: FontWeight.w600,
-                            ),
+                          text: 'Welcome To Football 48\n', //Back!
+                          style: TextStyle(
+                            fontSize: 45.0,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                        TextSpan( 
+                        TextSpan(
                             text:
                                 '\nEnter personal details to your employee account',
                             style: TextStyle(

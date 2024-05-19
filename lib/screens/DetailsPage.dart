@@ -30,7 +30,7 @@ class _DetailsHomeScreenState extends State<DetailsHomeScreen> {
   Future<void> fetchNews() async {
     try {
       final response =
-          await http.get(Uri.parse("http://192.168.1.35:3000/news"));
+          await http.get(Uri.parse("http://192.168.1.39:3000/news"));
       print(response);
       if (response.statusCode == 200) {
         final List<dynamic> newsJson = json.decode(response.body);
