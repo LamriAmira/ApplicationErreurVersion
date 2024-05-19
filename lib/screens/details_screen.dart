@@ -1,59 +1,42 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
-import 'package:football_app/models/news_model.dart';
+import 'package:football_app/logic/models/news_model.dart';
 
-class DetailsScreen extends StatefulWidget {
-  DetailsScreen(this.data, {Key? key}) : super(key: key);
-  NewsData data;
-  @override
-  State<DetailsScreen> createState() => _DetailsScreenState();
-}
+class DetailsScreen extends StatelessWidget {
+  final NewsData data;
 
-class _DetailsScreenState extends State<DetailsScreen> {
+  DetailsScreen(this.data);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.orange.shade900),
+        title: Text(data.titre_art ?? 'News Details'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(18.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        padding: const EdgeInsets.all(16.0),
+        child: ListView(
           children: [
+            data.image_art != null
+                ? Image.network(
+                    "http://192.168.1.35:3000/images/${data.image_art!}")
+                : Image.asset('assets/default_image.jpg'),
+            const SizedBox(height: 16),
             Text(
-              widget.data.title!,
-              style: TextStyle(
-                fontSize: 26.0,
-                fontWeight: FontWeight.bold,
-              ),
+              data.titre_art ?? 'No title available',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(
-              height: 8.0,
-            ),
+            const SizedBox(height: 16),
             Text(
-              widget.data.author!,
-              style: TextStyle(
-                color: Colors.black54,
-              ),
+              data.description_art ?? 'No content available',
+              style: TextStyle(fontSize: 16),
             ),
-            SizedBox(
-              height: 30.0,//mmmm20
+            const SizedBox(height: 16),
+            Text(
+              data.auteur_art ?? 'Unknown author',
+              style: TextStyle(fontSize: 14, fontStyle: FontStyle.italic),
             ),
-            Hero(
-              tag: "${widget.data.title}",
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(30.0),
-                child: Image.network(widget.data.urlToImage!),
-              ),
-            ),
-            SizedBox(
-              height: 30.0,
-            ),
-            Text(widget.data.content!)
           ],
         ),
       ),

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:football_app/constants.dart';
 import 'package:iconsax/iconsax.dart';
@@ -18,14 +20,13 @@ class UpComingMatch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     double width = MediaQuery.of(context).size.width;
-    
+
     return Stack(
       children: [
         Container(
           margin: const EdgeInsets.only(bottom: 15),
-          width: double.infinity,// need to be fixed
+          width: double.infinity, // need to be fixed
           padding: const EdgeInsets.symmetric(
             horizontal: 0,
             vertical: 15,
@@ -39,7 +40,7 @@ class UpComingMatch extends StatelessWidget {
               Text(
                 homeTitle,
                 style: TextStyle(
-                  fontSize: 14,//mmmm15
+                  fontSize: 14, //mmmm15
                   color: Colors.grey.shade700,
                   fontWeight: FontWeight.bold,
                 ),
@@ -58,7 +59,7 @@ class UpComingMatch extends StatelessWidget {
                   )
                 ],
               ),
-              const SizedBox(width: 5),//mmm10
+              const SizedBox(width: 5), //mmm10
               Column(
                 children: [
                   Text(
@@ -71,11 +72,11 @@ class UpComingMatch extends StatelessWidget {
                   ),
                   Text(
                     date,
-                    style: TextStyle(fontSize: 12),
+                    style: const TextStyle(fontSize: 12),
                   )
                 ],
               ),
-              const SizedBox(width: 5),//mmmm10
+              const SizedBox(width: 5), //mmmm10
               Column(
                 children: [
                   Image.asset(
@@ -93,7 +94,7 @@ class UpComingMatch extends StatelessWidget {
               Text(
                 awayTitle,
                 style: TextStyle(
-                  fontSize: 14,//mmmm15
+                  fontSize: 14, //mmmm15
                   color: Colors.grey.shade700,
                   fontWeight: FontWeight.bold,
                 ),

@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 class name extends StatefulWidget {
@@ -10,9 +12,6 @@ class name extends StatefulWidget {
 class _nameState extends State<name> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Container(
-
-    ));
-
+    return Scaffold(body: Container());
   }
 }

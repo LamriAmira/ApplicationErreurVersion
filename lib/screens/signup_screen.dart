@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:football_app/screens/signin_screen.dart';
 import 'package:football_app/theme/theme.dart';
@@ -14,9 +16,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final _formSignupKey = GlobalKey<FormState>();
   bool agreePersonalData = true;
 
-  void SignUp() {
-    
-  }
+  void SignUp() {}
 
   @override
   Widget build(BuildContext context) {
@@ -152,7 +152,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ),
                       ),
                       const SizedBox(
-                        height: 25.0,//mmmmm25
+                        height: 25.0, //mmmmm25
                       ),
                       // i agree to the processing
                       Row(
@@ -244,11 +244,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         height: 30.0,
                       ),
                       // sign up social media logo
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-
-                        ],
+                        children: [],
                       ),
                       const SizedBox(
                         height: 25.0,

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/constants.dart';
 import 'package:football_app/widgets/live_match_info_box.dart';

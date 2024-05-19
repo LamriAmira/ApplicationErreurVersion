@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:football_app/constants.dart';
+import 'package:football_app/logic/models/mysql.dart';
 import 'package:football_app/screens/main_screen.dart';
-import 'package:football_app/screens/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+var db = Mysql();
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
           background: kbackgroundColor,
         ),
       ),
-      home: const MainScreen(),//WelcomeScreen
+      home: const MainScreen(), //WelcomeScreen
     );
   }
 }

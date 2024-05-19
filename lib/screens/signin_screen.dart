@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:football_app/screens/signup_screen.dart';
 import 'package:football_app/widgets/custom_scaffold.dart';
@@ -15,9 +17,7 @@ class _SignInScreenState extends State<SignInScreen> {
   final _formSignInKey = GlobalKey<FormState>();
   bool rememberPassword = true;
 
-  void SignIn() {
-    
-  }
+  void SignIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -213,11 +213,9 @@ class _SignInScreenState extends State<SignInScreen> {
                       const SizedBox(
                         height: 25.0,
                       ),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-
-                        ],
+                        children: [],
                       ),
                       const SizedBox(
                         height: 25.0,

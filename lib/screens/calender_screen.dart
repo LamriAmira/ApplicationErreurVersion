@@ -1,8 +1,5 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:football_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:football_app/widgets/categories.dart';
-import 'package:football_app/models/category.dart';
 import 'package:football_app/widgets/calender_Match.dart';
 
 class CalenderHomeScreen extends StatefulWidget {
@@ -23,7 +20,7 @@ class _CalenderHomeScreenState extends State<CalenderHomeScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
-        title: Text(
+        title: const Text(
           "Calender",
           style: TextStyle(color: Colors.orange),
         ),
@@ -38,12 +35,12 @@ class _CalenderHomeScreenState extends State<CalenderHomeScreen> {
       ),
      body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(1),//mmm16
+          padding: const EdgeInsets.all(1),//mmm16
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Categories",
                 style: TextStyle(
                   fontSize: 26.0,

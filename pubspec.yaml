@@ -14,7 +14,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   iconsax: ^0.0.8
   carousel_slider: ^4.1.1
-  icons_plus: 
+  icons_plus:
+  mysql1: ^0.20.0
+  http: ^1.2.1
 
 dev_dependencies:
   flutter_test:
@@ -28,6 +30,7 @@ flutter:
   assets:
     - google_fonts/
     - assets/images/
+    - assets/
 
   fonts:
     - family: TitilliumWeb

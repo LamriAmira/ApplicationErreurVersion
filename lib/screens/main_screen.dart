@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:football_app/constants.dart';
 import 'package:football_app/screens/DetailsPage.dart';
-import 'package:football_app/models/news_model.dart';
 import 'package:football_app/screens/calender_screen.dart';
-import 'package:football_app/screens/details_screen.dart';
 import 'package:football_app/screens/home_screen.dart';
 import 'package:football_app/screens/profile.dart';
 import 'package:iconsax/iconsax.dart';
@@ -18,10 +16,10 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {       
   int currentTab = 0;
   List screens = [
-    HomeScreen(),
-    CalenderHomeScreen(),
-    DetailsHomeScreen(),
-    name(),
+    const HomeScreen(),
+    const CalenderHomeScreen(),
+    const DetailsHomeScreen(),
+    const name(),
   ];
 
   @override

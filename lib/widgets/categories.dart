@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:football_app/constants.dart';
-import 'package:football_app/models/category.dart';
+import 'package:football_app/logic/models/category.dart';
 
 class Categories extends StatelessWidget {
   const Categories({
@@ -27,7 +27,7 @@ class Categories extends StatelessWidget {
               horizontal: 20,
               vertical: 10,
             ),
-            margin: const EdgeInsets.only(right: 10),//mm20
+            margin: const EdgeInsets.only(right: 10), //mm20
             child: Text(
               catgories[index],
               style: TextStyle(
@@ -42,4 +42,3 @@ class Categories extends StatelessWidget {
     );
   }
 }
-

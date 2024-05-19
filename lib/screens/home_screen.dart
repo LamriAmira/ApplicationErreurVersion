@@ -24,7 +24,8 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Row(
           children: [
             Spacer(),
-            Text( // logo de l'app
+            Text(
+              // logo de l'app
               "F",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -98,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         const Text(
                           "Classememt", // boutton classement
                           style: TextStyle(
-                            fontSize: 15,//mmm15
+                            fontSize: 15, //mmm15
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
