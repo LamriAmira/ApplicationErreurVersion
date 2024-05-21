@@ -12,8 +12,7 @@ class AuthController {
     try {
       var res = await http.post(
         Uri.parse(url),
-        body:
-            jsonEncode(<String, String>{"email": email, "password": password}),
+        body: jsonEncode({"email": email, "password": password}),
         headers: {"Content-Type": "application/json"},
       );
 
@@ -23,22 +22,41 @@ class AuthController {
         await storage.write(key: "renewalToken", value: data["renewalToken"]);
 
         print("Login successful");
-        print("Access Token: ${data["accessToken"]}");
-        print("Renewal Token: ${data["renewalToken"]}");
-
-        // Return true indicating successful login
         return true;
       } else {
         print("Login failed: ${res.statusCode}");
         print("Response body: ${res.body}");
-
-        // Return false indicating failed login
         return false;
       }
     } catch (e) {
       print("Error during login: $e");
+      return false;
+    }
+  }
 
-      // Return false indicating failed login due to error
+  Future<bool> signUpAuth(String name, String email, String password) async {
+    var url = "http://192.168.1.39:3000/signup";
+    try {
+      var res = await http.post(
+        Uri.parse(url),
+        body: jsonEncode({"name": name, "email": email, "password": password}),
+        headers: {"Content-Type": "application/json"},
+      );
+
+      if (res.statusCode == 201) {
+        var data = jsonDecode(res.body);
+        await storage.write(key: "accessToken", value: data["accessToken"]);
+        await storage.write(key: "renewalToken", value: data["renewalToken"]);
+
+        print("Signup successful");
+        return true;
+      } else {
+        print("Signup failed: ${res.statusCode}");
+        print("Response body: ${res.body}");
+        return false;
+      }
+    } catch (e) {
+      print("Error during signup: $e");
       return false;
     }
   }
